@@ -16,6 +16,15 @@
 # username=dbuser
 # password=password
 
+# Mondrian on MS SQL Server
+# ----------------------------------------------
+# type=OLAP
+# name=steelwheels
+# driver=mondrian.olap4j.MondrianOlap4jDriver
+# location=jdbc:mondrian:Jdbc=jdbc:sqlserver://localhost;databaseName=sampledata;Catalog=../webapps/saiku/steelwheels/steelwheels.mondrian.xml;JdbcDrivers=com.microsoft.sqlserver.jdbc.SQLServerDriver;
+# username=dbuser
+# password=password
+
 # XML/A (Pentaho BI-Server)
 # ----------------------------------------------
 # type=OLAP

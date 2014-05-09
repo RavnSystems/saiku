@@ -52,6 +52,9 @@ public class PentahoRepositoryResource {
 
 	private static final Logger log = LoggerFactory.getLogger(PentahoRepositoryResource.class);
 
+    // customise saved query extension
+    private static final String extension = ".query";
+
 	/**
 	 * 
 	 * @param queryName - The name of the query.
@@ -70,8 +73,8 @@ public class PentahoRepositoryResource {
 	{
 		try {
 
-			if (!action.endsWith(".saiku")) {
-				action += ".saiku";
+			if (!action.endsWith(extension)) {
+				action += extension;
 			}
 			System.out.println("solution:"+solution+" path:"+path + " action:" + action);
 
@@ -122,8 +125,8 @@ public class PentahoRepositoryResource {
 			@QueryParam("action") String action)		
 	{
 		try{
-			if (!action.endsWith(".saiku")) {
-				action += ".saiku";
+			if (!action.endsWith(extension)) {
+				action += extension;
 			}
 			
 			System.out.println("load solution:"+solution+" path:"+path + " action:" + action);
